@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Population vs Weekly Train Services by LGA",
+  "width": 700,
+  "height": 500,
+  "data": {
+    "url": "FINAL_lga_services_per_10k.csv"
+  },
+  "mark": {
+    "type": "circle",
+    "opacity": 0.8,
+    "stroke": "white",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "x": {
+      "field": "population",
+      "type": "quantitative",
+      "title": "Population"
+    },
+    "y": {
+      "field": "weekly_avg_services",
+      "type": "quantitative",
+      "title": "Average Weekly Train Services"
+    },
+    "size": {
+      "field": "actual_stop_count",
+      "type": "quantitative",
+      "title": "Train Stop Count",
+      "scale": {
+        "range": [40, 1600]
+      }
+    },
+    "tooltip": [
+      {"field": "LGA_NAME", "type": "nominal", "title": "LGA"},
+      {"field": "population", "type": "quantitative", "format": ","},
+      {"field": "weekly_avg_services", "type": "quantitative", "format": ".1f"},
+      {"field": "actual_stop_count", "type": "quantitative", "title": "Train Stops"}
+    ]
+  }
+}
