@@ -24,3 +24,8 @@ var vg_5 = "metroVSregional.vg.json";
 vegaEmbed("#metroVSregional", vg_5).then(function(result) {
     
 }).catch(console.error);
+
+var vg_6 = "accessibility.vg.json";
+vegaEmbed("#accessibility", vg_6).then(function(result) {
+    
+}).catch(console.error);
