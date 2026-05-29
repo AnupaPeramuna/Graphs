@@ -1,0 +1,30 @@
+
+
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Service Gap: Metro vs. Regional",
+  "width": 500,
+  "height": 300,
+  "data": { "url": "FINAL_lga_services_per_10k_edit_1.csv" },
+  "mark": "bar",
+  "encoding": {
+    "x": { 
+      "field": "weekly_services_per_10k", 
+      "type": "quantitative", 
+      "bin": {"maxbins": 15},
+      "title": "Weekly Services per 10k"
+    },
+    "y": { 
+      "aggregate": "count", 
+      "type": "quantitative",
+      "stack": "normalize", 
+      "title": "% of LGAs in this Category"
+    },
+    "color": { 
+      "field": "Region_Type", 
+      "type": "nominal",
+      "scale": {"range": ["#4c78a8", "#e45756"]}
+    }
+  }
+}

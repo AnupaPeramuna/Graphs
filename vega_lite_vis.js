@@ -19,3 +19,8 @@ var vg_4 = "servicesVsPopulation.vg.json";
 vegaEmbed("#population", vg_4).then(function(result) {
     
 }).catch(console.error);
+
+var vg_5 = "metroVSregional.vg.json";
+vegaEmbed("#metroVSregional", vg_5).then(function(result) {
+    
+}).catch(console.error);
